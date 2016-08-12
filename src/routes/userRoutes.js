@@ -1,24 +1,32 @@
 var express = require('express');
 var userRouter = express.Router();
 
-module.exports = function(app, passport, nav){
-	console.log("im now set")
-	app.post('/Login', passport.authenticate('local-login', {
-		successRedirect : '/profile', // redirect to the secure profile section
+module.exports = function(app, passport){
+	app.post('/login', passport.authenticate('local-login', {
+		successRedirect : '/Profile', // redirect to the secure profile section
 	    failureRedirect : '/login', // redirect back to the signup page if there is an error
 	    failureFlash : true // allow flash messages
 	}));
 
-	app.get('/login', function(req,res){
+	app.get('/login', function(req, res){
 		res.render('profile',{
 			title: 'Profile',
-			nav: nav,
+			nav: [{
+				    Link: '/Pets',
+				    Text: 'Pets'
+				}, {
+				    Link: '/Profile',
+				    Text: 'Profile'
+				}]
 		}, {message: req.flash('loginMessage')});
 	});
 
 	// app.get('/Signup', function(req,res){
 	// 	res.render('signup.ejs', {message: req.flash('signupMessage')});
 	// });
+
+
+	
 
 	app.post('/signup', passport.authenticate('local-signup', {
 			sucessRedirect: '/Profile',
@@ -27,10 +35,11 @@ module.exports = function(app, passport, nav){
 	}));
 
 	app.get('/signup', function(req,res){
-		res.render('profile',{
-			title: 'Profile',
-			nav: nav,
-		}, {message: req.flash('loginMessage')});
+		// res.render('profile',{
+		// 	title: 'Profile',
+		// 	nav: nav,
+		// }, {message: req.flash('loginMessage')});
+		res.render('/Profile)');
 	});
 
 	app.route('/Profile')
