@@ -1,23 +1,23 @@
 {
-  "development": {
-    "username": "lisamwatkins",
-    "password": "root",
-    "database": "pets_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "yh5et5kh2a5e8344",
-    "password": "vglez2deb9jhnb5e",
-    "database": "hnarnf0bax5jv638",
-    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
-  }
+    "development": {
+        "username": "yh5et5kh2a5e8344",
+        "password": "vglez2deb9jhnb5e",
+        "database": "hnarnf0bax5jv638",
+        "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "yh5et5kh2a5e8344",
+        "password": "vglez2deb9jhnb5e",
+        "database": "hnarnf0bax5jv638",
+        "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql"
+    }
 }
